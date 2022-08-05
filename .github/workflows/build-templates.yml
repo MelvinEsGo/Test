@@ -17,9 +17,10 @@ jobs:
     timeout-minutes: 3
     steps:
       - name: Zip Templates
-        working-directory: .
+        working-directory: ./
         shell: bash
         run: |
+          pwd
           ls -la
           rm -rf build
           mkdir -p build
