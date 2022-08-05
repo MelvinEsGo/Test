@@ -16,12 +16,12 @@ jobs:
     runs-on: [ubuntu-20.04]
     timeout-minutes: 3
     steps:
-      - name: Run build.sh
+      - name: Zip Templates
         run: |
           git clean -xdf
           rm -rf build
           mkdir -p build
-          for d in templates/* ; do
+          for d in ./templates/* ; do
               pushd $d
               out=$(basename $d)
               zip -r "../../build/${out}.zip" .
@@ -29,5 +29,6 @@ jobs:
           done
       - uses: EndBug/add-and-commit@v9
         with:
-          add: "build/*.zip"
+          add: "./build/*.zip"
           message: "Updated Template Builds"
+          push: true
