@@ -16,6 +16,7 @@ jobs:
     runs-on: [ubuntu-20.04]
     timeout-minutes: 3
     steps:
+      - uses: actions/checkout@v2
       - name: Zip Templates
         shell: bash
         run: |
@@ -29,7 +30,8 @@ jobs:
               zip -r "../../build/${out}.zip" .
               popd
           done
-      - uses: EndBug/add-and-commit@v9
+      - name: "Commit updated Builds"
+        uses: EndBug/add-and-commit@v9
         with:
           add: "./build/*.zip"
           message: "Updated Template Builds"
