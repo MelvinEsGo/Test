@@ -17,6 +17,7 @@ jobs:
     timeout-minutes: 3
     steps:
       - name: Zip Templates
+        working-directory: .
         run: |
           git clean -xdf
           rm -rf build
