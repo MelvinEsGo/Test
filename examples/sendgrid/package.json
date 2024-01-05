@@ -20,6 +20,6 @@
     }
   },
   "dependencies": {
-    "@sendgrid/mail": "^7.6.1"
+    "@sendgrid/mail": "^8.0.0"
   }
 }
