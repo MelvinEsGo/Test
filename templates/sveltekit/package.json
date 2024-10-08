@@ -19,7 +19,7 @@
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
     "@serverless/cloud": "^2.10.16",
-    "cookie": "^0.4.1"
+    "cookie": "^0.7.0"
   },
   "serverless": {
     "app": "svelte-kit-js-example"
